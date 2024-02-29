@@ -1,0 +1,36 @@
+def add(x, y):
+    """Addition."""
+    return x + y
+
+def subtract(x, y):
+    """Subtraction."""
+    return x - y
+
+def multiply(x, y):
+    """Multiplication."""
+    return x * y
+
+def divide(x, y):
+    """Division."""
+    if y != 0:
+        return x / y
+    else:
+        return "Error: Division by zero."
+
+# Example usage
+num1 = float(input("Enter first number: "))
+operator = input("Enter operator (+, -, *, /): ")
+num2 = float(input("Enter second number: "))
+
+if operator == '+':
+    result = add(num1, num2)
+elif operator == '-':
+    result = subtract(num1, num2)
+elif operator == '*':
+    result = multiply(num1, num2)
+elif operator == '/':
+    result = divide(num1, num2)
+else:
+    result = "Error: Invalid operator."
+
+print(f"Result: {result}")
